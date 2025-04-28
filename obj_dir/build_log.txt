@@ -1,0 +1,365 @@
+Vcnn_accelerator.mk:66: warning: overriding commands for target `Vcnn_accelerator.o'
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.mk:276: warning: ignoring old commands for target `Vcnn_accelerator.o'
+c++  -I.  -MMD -I/opt/homebrew/Cellar/verilator/5.036/share/verilator/include -I/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments -Wno-bool-operation -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare -Wno-tautological-bitwise-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++11  -Os -c -o sim_main.o ../sim/sim_main.cpp
+c++ -Os  -I.  -MMD -I/opt/homebrew/Cellar/verilator/5.036/share/verilator/include -I/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments -Wno-bool-operation -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare -Wno-tautological-bitwise-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++11  -x c++-header Vcnn_accelerator__pch.h -o Vcnn_accelerator__pch.h.fast.gch
+c++ -Os  -I.  -MMD -I/opt/homebrew/Cellar/verilator/5.036/share/verilator/include -I/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments -Wno-bool-operation -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare -Wno-tautological-bitwise-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++11  -c -o verilated.o /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.cpp
+c++ -Os  -I.  -MMD -I/opt/homebrew/Cellar/verilator/5.036/share/verilator/include -I/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments -Wno-bool-operation -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare -Wno-tautological-bitwise-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++11  -c -o verilated_threads.o /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_threads.cpp
+c++ -Os  -I.  -MMD -I/opt/homebrew/Cellar/verilator/5.036/share/verilator/include -I/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments -Wno-bool-operation -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare -Wno-tautological-bitwise-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++11  -c -o Vcnn_accelerator__ALL.o Vcnn_accelerator__ALL.cpp
+echo "" > Vcnn_accelerator__ALL.verilator_deplist.tmp
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_threads.cpp:24:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilatedos.h:283:3: error: "Verilator requires a C++14 or newer compiler"
+  283 | # error "Verilator requires a C++In file included from ../sim/sim_main.cpp:11:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:42:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilatedos.h:283:3: error: 4 or newer co"Verilator requires a C++14 or newer compiler"mpile
+In file included from r"
+        283|   ^
+Vcnn_accelerator__pch.h | :21:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:42:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilatedos.h:283:3: error: "Verilator requires a C++14 or newer compiler"
+#  283 |  error "Verilator req# erruires a C++or "Verilator r14 or newer compilerequires a C++14 or newer c"
+      |   ^
+ompiler"
+      |   ^
+In file included from Vcnn_accelerator__ALL.cpp:3:
+In file included from ./Vcnn_accelerator.cpp:4:
+In file included from ./Vcnn_accelerator__pch.h:21:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:42:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilatedos.h:283:3: error: "Verilator requires a C++14 or newer compiler"
+  283 | # error "Verilator requires a C++In file included from 14 or new/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.cpper compiler"
+      |   ^
+:51:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilatedos.h:283:3: error: "Verilator requires a C++14 or newer compiler"
+  283 | # error "Verilator requires a C++14 or newer compiler"
+      |   ^
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.cpp:53:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_imp.h:32:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:77:22: error: expected namespace name
+   77 | using namespace std::literals;  // "<std::string literal>"s; see SF.7 core guideline
+      |                 ~~~~~^
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_threads.cpp:26:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_threads.h:28:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:77:22: error: expected namespace name
+   77 | using namespace std::literals;  // "<std::string literal>"s; see SF.7 core guideline
+      |                 ~~~~~^
+In file included from ../sim/sim_main.cpp:1:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:77:22: error: expected namespace name
+   77 | using namespace std::literals;  // "<std::string literal>"s; see SF.7 core guideline
+      |                 ~~~~~^
+In file included from Vcnn_accelerator__pch.h:21:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:77:22: error: expected namespace name
+   77 | using namespace std::literals;  // "<std::string literal>"s; see SF.7 core guideline
+      |                 ~~~~~^
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_threads.cpp:26:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_threads.h:28:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:1029:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:268:24: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  268 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                         
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:268:24: error: expected ';' after return statement
+  268 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      In file included from Vcnn_accelerator__ALL.cpp:3:
+In file included from ./Vcnn_accelerator.cpp:4:
+In file included from ./Vcnn_accelerator__pch.h:21:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:77:22: error: expected namespace name
+|                           ;
+77 | using namespace std::literals;  // "<std::string literal>"s; see SF.7 core guideline
+      |                 ~~~~~^
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.cpp:53:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_imp.h:32:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:1029:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:268:24: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  268 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                         
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:268:24: error: expected ';' after return statement
+  268 |     return "triggered="s + (e.isTriggere/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.hd:279:24: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+() ? "true" : "false");
+      |                        ^
+      |                        ;
+  279 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                         
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:279:24: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  279 |     retur/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:279:24: error: expected ';' after return statement
+n   279" |  t   return "triggered="s + (e.isTriggerred() ? "true" : "false");
+      |                        ^
+      |                        ;
+iggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                         
+In file included from ../sim/sim_main.cpp:1:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:1029:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:268:24: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  268 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                         
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:268:24: error: expected ';' after return statement
+  268 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                        ;
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:279:24: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  279 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                         
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:279:24: error: expected ';' after return statement
+  279 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                        ;
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:279:24: error: expected ';' after return statement
+  279 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                        ;
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1355:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1355 |     auto& find_element(const std::vector<size_t>& indices, std::false_type) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1360:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1360 |     auto& find_element(const std::vector<size_t>& indices, std::true_type) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1366:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1366 |     auto& find_element(const std::vector<size_t>& indices) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1355:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1355 |     auto& find_element(const std::vector<size_t>& indices, std::false_type) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1360:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1360 |     auto& find_element(const std::vector<size_t>& indices, std::true_type) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1366:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1366 |     auto& find_element(const std::vector<size_t>& indices) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1609:12: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1609 |     static auto& apply(T_Target& target, const size_t* indicesp) {
+      |            ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1609:12: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1609 |     static auto& apply(T_Target& target, const size_t* indicesp) {
+      |            ^
+In file included from Vcnn_accelerator__pch.h:21:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:1029:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:268:24: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  268 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                         
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:268:24: error: expected ';' after return statement
+  268 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                        ;
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:279:24: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  279 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                         
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:279:24: error: expected ';' after return statement
+  279 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                        ;
+In file included from Vcnn_accelerator__ALL.cpp:3:
+In file included from ./Vcnn_accelerator.cpp:4:
+In file included from ./Vcnn_accelerator__pch.h:21:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:1029:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:268:24: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  268 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                         
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:268:24: error: expected ';' after return statement
+  268 |     return "triggered="s + (e.isTriggered() ? "true" : "false");
+      |                        ^
+      |                        ;
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1917:23: error: no member named 'exchange' in namespace 'std'
+ 1917 |         : m_objp{std::exchange(moved.m_objp, nullptr)} {}
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:279:24: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  279 |     return "triggered="s + (e.isTriggered/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:(1355:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1355 |     auto& find_element(const std::vector<siz) ? "true" : "false");
+      |                        ^
+      |                         
+e_t>& indices, std::false_type) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:279:24: error: expected ';' after return statement
+  279 |     return "triggered="s + (e.isTriggered() ? "true/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h" : "fa/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.hlse:"):;1360
+      | 1927                       ^
+:      | 5                       ;
+:23: error: no member named 'exchange' in namespace 'std'
+: 1927 |         : m_objp{std::exch error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ange(moved.m_objp, null ptr)1360 |     auto} {}&
+      |                  ~~~~~^
+ find_elem/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1917:23: error: no member named 'exchange' in namespace 'std'
+ 1917 |         : m_objp{std::exchange(movent(const std::ed.vector<size_t>& indices, std::true_type) {
+      |     ^
+m_objp, nullptr)} {}
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1366:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1366 |     auto& find_element(const std::vect/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1355:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+o 1355 |     auto& find_element(const std::vector<size_t>& indices, std::false_type) {
+      |     ^
+r<size_t>& indices) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1360:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1360 |     auto& find_element(const std::vector<size_t>& indices, std::true_type) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1366:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1366 |     auto& find_element(const std::vector<size_t>& indices) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1942:23: error: no member named 'exchange' in namespace 'std'
+ 1942 |         m_objp = std::exchange(moved.m_objp, nullptr);
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1927:23: error: no member named 'exchange' in namespace 'std'
+ 1927 |         : m_objp{std::exchange(moved.m_objp, nullptr)} {}
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1957:23: error: no member named 'exchange' in namespace 'std'
+ 1957 |         m_objp = std::exchange(moved/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1609:12: .error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1609 |  m _  osbtatic auto& apply(T_Target& target, const size_t* indicesp) {
+      |            ^
+jp, nullptr);
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1355:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1355 |     auto& find_element(const std::vector<size_t>& indices, std::false_type) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1360:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1360 |     auto& find_element(const std::vector<size_t>& indices, std::true_type) {
+      |     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1366:5: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1366 |     auto& find_element(const st/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1942:23: error: no member named 'exchange' in namespace 'std'
+d 1942: |  : v      m_objp = std::exchange(moveedctor/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1609:12: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1609 |   <size_t>  .stati& im_objp,ndices) {
+c au      | to    ^
+ nullptr);
+      |                  ~~~~~^
+& apply(T_Target& target, const size_t* indicesp) {
+      |            ^
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_threads.cpp:26:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_threads.h:28:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:1034:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_funcs.h:233:41: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  233 |     return lhsp ? std::string{lhsp} : ""s;
+      |                                         ^
+      |                                          
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_funcs.h:233:41: error: expected ';' after return statement
+  233 |     return lhsp ? std::string{lhsp} : ""s;
+      |                                         ^
+      |                                         ;
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1957:23: error: no member named 'exchange' in namespace 'std'
+ 1957 |         m_objp = std::exchange(moved.m_objp, nullptr);
+      |                  ~~~~~^
+In file included from ../sim/sim_main.cpp:1:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:1034:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_funcs.h:233:41: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  233 |     return lhsp ? std::string{lhsp} : ""s;
+      |                                         ^
+      |                                          
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_funcs.h:233:41: error: expected ';' after return statement
+  233 |     return lhsp ? std::string{lhsp} : ""s;
+      |                                         ^
+      |                                         ;
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1609:12: error: 'auto' return without trailing return type; deduced return types are a C++14 extension
+ 1609 |     st/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:a1917t:i23: error: no member named 'exchange' in namespace 'std'
+c 1917 |         : m_objp{std::exchange(moved.m_objp, nullptr)} {}
+      |                  ~~~~~^
+ auto& apply(T_Target& target, const size_t* indicesp) {
+      |            ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1917:23: error: no member named 'exchange' in namespace 'std'
+ 1917 |         : m_objp{std::exchange(moved.m_objp, nullptr)} {}
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1927:23: error: no member named 'exchange' in namespace 'std'
+ 1927 |         : m_objp{std::exchange(moved.m_objp, nullptr)} {}
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1927:23: error: no member named 'exchange' in namespace 'std'
+ 1927 |         : m_objp{std::exchange(moved.m_objp, nullptr)} {}
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1942:23: error: no member named 'exchange' in namespace 'std'
+ 1942 |         m_objp = std::exchange(moved.m_objp, nullptr);
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1942:23: error: no member named 'exchange' in namespace 'std'
+ 1942 |         m_objp = std::exchange(moved.m_objp, nullptr);
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1957:23: error: no member named 'exchange' in namespace 'std'
+ 1957 |         m_objp = std::exchange(moved.m_objp, nullptr);
+      |                  ~~~~~^
+In file included from Vcnn_accelerator__pch.h:21:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:1034:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_funcs.h:233:41: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  233 |     return lhsp ? std::string{lhsp} : ""s;
+      |                                         ^
+      |                                          
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_funcs.h:233:41: error: expected ';' after return statement
+  233 |     return lhsp ? std::string{lhsp} : ""s;
+      |                                         ^
+      |                                         ;
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1957:23: error: no member named 'exchange' in namespace 'std'
+ 1957 |         m_objp = std::exchange(moved.m_objp, nullptr);
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1917:23: error: no member named 'exchange' in namespace 'std'
+ 1917 |         : m_objp{std::exchange(moved.m_objp, nullptr)} {}
+      |                  ~~~~~^
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.cpp:53:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_imp.h:32:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:1034:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_funcs.h:233:41: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  233 |     return lhsp ? std::string{lhsp} : ""s;
+      |                                         ^
+      |                                          
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_funcs.h:233:41: error: expected ';' after return statement
+  233 |     return lhsp ? std::string{lhsp} : ""s;
+      |                                         ^
+      |                                         ;
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1927:23: error: no member named 'exchange' in namespace 'std'
+ 1927 |         : m_objp{std::exchange(moved.m_objp, nullptr)} {}
+      |                  ~~~~~^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1942:23: error: no member named 'exchange' in namespace 'std'
+ 1942 |         m_objp = std::exchange(moved.m_objp, nullptr);
+      |                  ~~~~~^
+../sim/sim_main.cpp:10:10: error: no member named 'image' in 'Vcnn_accelerator'
+   10 |     top->image = 64'b1111000011110000111100001111000011110000111100001111000011110000;
+      |     ~~~  ^
+../sim/sim_main.cpp:10:20: warning: missing terminating ' character [-Winvalid-pp-token]
+   10 |     top->image = 64'b1111000011110000111100001111000011110000111100001111000011110000;
+      |                    ^
+../sim/sim_main.cpp:10:20: error: expected ';' after expression
+   10 |     top->image = 64'b1111000011110000111100001111000011110000111100001111000011110000;
+      |                    ^
+      |                    ;
+../sim/sim_main.cpp:10:20: error: expected expression
+../sim/sim_main.cpp:11:21: warning: missing terminating ' character [-Winvalid-pp-token]
+   11 |     top->kernel = 72'b0000000100000001000000001000000100000001000000001000000100000001;
+      |                     ^
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h:1957:23: error: no member named 'exchange' in namespace 'std'
+ 1957 |         m_objp = std::exchange(moved.m_objp, nullptr);
+      |                  ~~~~~^
+In file included from Vcnn_accelerator__ALL.cpp:3:
+In file included from ./Vcnn_accelerator.cpp:4:
+In file included from ./Vcnn_accelerator__pch.h:21:
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h:1034:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_funcs.h:233:41: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  233 |     return lhsp ? std::string{lhsp} : ""s;
+      |                                         ^
+      |                                          
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_funcs.h:233:41: error: expected ';' after return statement
+  233 |     return lhsp ? std::string{lhsp} : ""s;
+      |                                         ^
+      |                                         ;
+16 errors generated.
+make: *** [Vcnn_accelerator__pch.h.fast.gch] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.cpp:53:
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_imp.h:555:63: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  555 |         const std::string msg = ("%Error: Testbench C called "s + namep
+      |                                                               ^
+      |                                                                
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_imp.h:555:63: error: expected ')'
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_imp.h:555:33: note: to match this '('
+  555 |         const std::string msg = ("%Error: Testbench C called "s + namep
+      |                                 ^
+2 warnings and 19 errors generated.
+make: *** [sim_main.o] Error 1
+/opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.cpp:983:41: error: invalid suffix on literal; C++11 requires a space between literal and identifier [-Wreserved-user-defined-literal]
+  983 |                             append = "-"s + VL_DECIMAL_NW(lbits, neg);
+      |                                         ^
+      |                                          
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [verilated.o] Error 1
+16 errors generated.
+make: *** [Vcnn_accelerator__ALL.o] Error 1
+16 errors generated.
+make: *** [verilated_threads.o] Error 1
+rm Vcnn_accelerator__ALL.verilator_deplist.tmp

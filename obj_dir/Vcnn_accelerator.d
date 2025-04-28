@@ -1,0 +1,11 @@
+Vcnn_accelerator.o: \
+  /Users/mehul/Downloads/cnn_hardware/obj_dir/Vcnn_accelerator__pch.h \
+  /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated.h \
+  /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilatedos.h \
+  /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_config.h \
+  /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_types.h \
+  /opt/homebrew/Cellar/verilator/5.036/share/verilator/include/verilated_funcs.h \
+  /Users/mehul/Downloads/cnn_hardware/obj_dir/Vcnn_accelerator__Syms.h \
+  /Users/mehul/Downloads/cnn_hardware/obj_dir/Vcnn_accelerator.h \
+  /Users/mehul/Downloads/cnn_hardware/obj_dir/Vcnn_accelerator___024root.h \
+  Vcnn_accelerator.cpp Vcnn_accelerator__pch.h
