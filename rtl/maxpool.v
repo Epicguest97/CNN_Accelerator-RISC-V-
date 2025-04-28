@@ -1,25 +1,23 @@
-module maxpool(
-    input [35:0] feature_map_in,  // 6x6 feature map input
-    output [8:0] feature_map_out  // 3x3 feature map output
+module maxpool (
+    input [15:0] feature_map_in [0:35],  // Flattened 6x6 input array (16-bit each)
+    output reg [15:0] feature_map_out [0:8]  // Flattened 3x3 output array (16-bit each)
 );
-    reg [3:0] max_val [8:0];
+
     integer i, j;
+    reg [15:0] max_val;
     
+    // Max pooling operation (2x2)
     always @(*) begin
-        // Apply 2x2 max-pooling
         for (i = 0; i < 3; i = i + 1) begin
             for (j = 0; j < 3; j = j + 1) begin
-                max_val[i*3+j] = max(feature_map_in[(2*i)*6+j], feature_map_in[(2*i+1)*6+j]);
+                max_val = feature_map_in[(2*i)*6 + (2*j)];  // Initialize with the first element of the 2x2 block
+                // Check the other 3 elements in the 2x2 block
+                max_val = (feature_map_in[(2*i)*6 + (2*j+1)] > max_val) ? feature_map_in[(2*i)*6 + (2*j+1)] : max_val;
+                max_val = (feature_map_in[(2*i+1)*6 + (2*j)] > max_val) ? feature_map_in[(2*i+1)*6 + (2*j)] : max_val;
+                max_val = (feature_map_in[(2*i+1)*6 + (2*j+1)] > max_val) ? feature_map_in[(2*i+1)*6 + (2*j+1)] : max_val;
+                feature_map_out[i*3 + j] = max_val;
             end
         end
     end
-    
-    function [3:0] max;
-        input [3:0] a, b;
-        begin
-            max = (a > b) ? a : b;
-        end
-    endfunction
-    
-    assign feature_map_out = max_val;
+
 endmodule

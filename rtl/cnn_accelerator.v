@@ -1,28 +1,27 @@
-module cnn_accelerator(
-    input [63:0] image,  // 8x8 grayscale image (64 bits)
-    input [71:0] kernel, // 3x3 kernel (72 bits)
-    output [8:0] output_map // 3x3 output feature map
+module cnn_accelerator (
+    input [15:0] feature_map_in [0:35],  // Input 6x6 array (flattened)
+    output [15:0] feature_map_out [0:8]  // Output 3x3 array (flattened)
 );
-    wire [35:0] conv_out;  // 6x6 feature map after convolution
-    wire [35:0] relu_out;  // 6x6 feature map after ReLU
-    wire [8:0] pool_out;   // 3x3 feature map after max-pooling
 
-    // Instantiate the modules
+    wire [15:0] conv_out [0:35];   // Output of the convolution layer
+    wire [15:0] relu_out [0:35];   // Output of the ReLU layer
+
+    // Instantiate the Convolution Layer
     conv_layer conv_inst (
-        .image(image),
-        .kernel(kernel),
-        .feature_map(conv_out)
+        .feature_map_in(feature_map_in),
+        .feature_map_out(conv_out)
     );
 
+    // Instantiate the ReLU Layer
     relu relu_inst (
         .feature_map_in(conv_out),
         .feature_map_out(relu_out)
     );
 
-    maxpool pool_inst (
+    // Instantiate the MaxPool Layer
+    maxpool maxpool_inst (
         .feature_map_in(relu_out),
-        .feature_map_out(pool_out)
+        .feature_map_out(feature_map_out)
     );
 
-    assign output_map = pool_out;
 endmodule
