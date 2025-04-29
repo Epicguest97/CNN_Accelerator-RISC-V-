@@ -104,7 +104,7 @@ feature_map_out[8]: 0x5554
 <!-- Add your screenshots below -->
 
 **Simulation Waveform:**  
-![Simulation Screenshot](doc/simulation_waveform.png)
+![Simulation Screenshot](obj_dire/waveform_plot.png)
 
 **Accelerator Block Diagram:**  
 ![Block Diagram](doc/accelerator_block_diagram.png)
