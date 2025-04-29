@@ -1,5 +1,8 @@
-# Verilated -*- Makefile -*- 
+# Verilated -*- Makefile -*-
 # DESCRIPTION: Verilator output: Makefile for building Verilated archive or executable
+#
+# Execute this makefile from the object directory:
+#    make -f Vcnn_accelerator.mk
 
 default: Vcnn_accelerator
 
@@ -34,23 +37,19 @@ VM_PREFIX = Vcnn_accelerator
 VM_MODPREFIX = Vcnn_accelerator
 # User CFLAGS (from -CFLAGS on Verilator command line)
 VM_USER_CFLAGS = \
-    -std=c++14
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \
 
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
-    sim_main \
-    
+	sim_main \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
-    .. \
-    ../sim \
+	.. \
+	../sim \
 
-### Verbose Output (for debugging)
-VERBOSE = 1
 
 ### Default rules...
 # Include list of all generated classes
@@ -58,14 +57,15 @@ include Vcnn_accelerator_classes.mk
 # Include global rules
 include $(VERILATOR_ROOT)/include/verilated.mk
 
-### Object files (ensure they are compiled)
-sim_main.o: sim/sim_main.cpp
-	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+### Executable rules... (from --exe)
+VPATH += $(VM_USER_DIR)
 
-# 
+sim_main.o: sim/sim_main.cpp 
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST)  -c -o $@ $<
 
-
-### Linking rule...
-# Ensure the linking process includes all necessary objects
-Vcnn_accelerator: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a $(VM_HIER_LIBS) sim_main.o 
+### Link rules... (from --exe)
+Vcnn_accelerator: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a $(VM_HIER_LIBS)
 	$(LINK) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) $(LIBS) $(SC_LIBS) -o $@
+
+
+# Verilated -*- Makefile -*-
