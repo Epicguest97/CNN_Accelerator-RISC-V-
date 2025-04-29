@@ -14,16 +14,18 @@ class alignas(VL_CACHE_LINE_BYTES) Vcnn_accelerator___024root final : public Ver
   public:
 
     // DESIGN SPECIFIC STATE
+    VL_IN8(clk,0,0);
+    VL_IN8(reset,0,0);
+    VL_IN8(start,0,0);
+    VL_OUT8(done,0,0);
+    CData/*0:0*/ cnn_accelerator__DOT__processing;
     CData/*0:0*/ __VstlFirstIteration;
     CData/*0:0*/ __VicoFirstIteration;
+    CData/*0:0*/ __Vtrigprevexpr___TOP__clk__0;
+    CData/*0:0*/ __Vtrigprevexpr___TOP__reset__0;
     CData/*0:0*/ __VactContinue;
     SData/*15:0*/ cnn_accelerator__DOT__conv_inst__DOT__sum;
     SData/*15:0*/ cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0;
-    SData/*15:0*/ cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
-    IData/*31:0*/ cnn_accelerator__DOT__conv_inst__DOT__i;
-    IData/*31:0*/ cnn_accelerator__DOT__conv_inst__DOT__j;
-    IData/*31:0*/ cnn_accelerator__DOT__conv_inst__DOT__m;
-    IData/*31:0*/ cnn_accelerator__DOT__conv_inst__DOT__n;
     IData/*31:0*/ __VactIterCount;
     VL_IN16(feature_map_in[36],15,0);
     VL_OUT16(feature_map_out[9],15,0);
@@ -31,11 +33,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vcnn_accelerator___024root final : public Ver
     VlUnpacked<SData/*15:0*/, 36> cnn_accelerator__DOT__relu_out;
     VlUnpacked<SData/*15:0*/, 36> cnn_accelerator__DOT____Vcellinp__relu_inst__feature_map_in;
     VlUnpacked<SData/*15:0*/, 9> cnn_accelerator__DOT__conv_inst__DOT__kernel;
-    VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
     VlTriggerVec<1> __VstlTriggered;
     VlTriggerVec<1> __VicoTriggered;
-    VlTriggerVec<0> __VactTriggered;
-    VlTriggerVec<0> __VnbaTriggered;
+    VlTriggerVec<2> __VactTriggered;
+    VlTriggerVec<2> __VnbaTriggered;
 
     // INTERNAL VARIABLES
     Vcnn_accelerator__Syms* const vlSymsp;

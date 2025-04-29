@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module conv_layer (
     input [15:0] feature_map_in [0:35],  // Flattened 6x6 input array (16-bit each)
     output reg [15:0] feature_map_out [0:35] // Flattened 6x6 output array (16-bit each)

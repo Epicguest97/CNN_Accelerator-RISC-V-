@@ -14,7 +14,6 @@ void Vcnn_accelerator___024root___eval_ico(Vcnn_accelerator___024root* vlSelf) {
     // Body
     if ((1ULL & vlSelfRef.__VicoTriggered.word(0U))) {
         Vcnn_accelerator___024root___ico_sequent__TOP__0(vlSelf);
-        vlSelfRef.__Vm_traceActivity[1U] = 1U;
     }
 }
 
@@ -23,53 +22,57 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
     Vcnn_accelerator__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
+    IData/*31:0*/ cnn_accelerator__DOT__conv_inst__DOT__i;
+    cnn_accelerator__DOT__conv_inst__DOT__i = 0;
+    SData/*15:0*/ cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val = 0;
     SData/*15:0*/ cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0;
     cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0 = 0;
     // Body
-    vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i = 0U;
-    while (VL_GTS_III(32, 6U, vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)) {
+    cnn_accelerator__DOT__conv_inst__DOT__i = 0U;
+    while (VL_GTS_III(32, 6U, cnn_accelerator__DOT__conv_inst__DOT__i)) {
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum = 0U;
-        if (VL_GTS_III(32, 6U, vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)) {
+        if (VL_GTS_III(32, 6U, cnn_accelerator__DOT__conv_inst__DOT__i)) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
-                                             & VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))
+                                             & VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))
                                    ? vlSelfRef.feature_map_in
-                                  [(0x3fU & VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))]
+                                  [(0x3fU & VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [0U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(1U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(1U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [1U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(2U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(2U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [2U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(1U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(1U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & VL_MULS_III(32, (IData)(6U), 
                                                         ((IData)(1U) 
-                                                         + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                                         + cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [3U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -78,12 +81,12 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(1U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(1U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [4U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -92,26 +95,26 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(2U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(2U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [5U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(2U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(2U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & VL_MULS_III(32, (IData)(6U), 
                                                         ((IData)(2U) 
-                                                         + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                                         + cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [6U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -120,12 +123,12 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(1U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(1U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [7U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -134,68 +137,68 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(2U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(2U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [8U])));
         }
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0 
             = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum;
-        if (VL_LIKELY(((0x23U >= (0x3fU & VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))) {
+        if (VL_LIKELY(((0x23U >= (0x3fU & VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))))) {
             vlSelfRef.cnn_accelerator__DOT__conv_out[(0x3fU 
-                                                      & VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))] 
+                                                      & VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))] 
                 = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0;
         }
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum = 0U;
-        if (VL_GTS_III(32, 6U, vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)) {
+        if (VL_GTS_III(32, 6U, cnn_accelerator__DOT__conv_inst__DOT__i)) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(1U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(1U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [0U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(2U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(2U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [1U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(3U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(3U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [2U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(1U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(1U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(1U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(1U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [3U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -204,12 +207,12 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(2U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(2U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [4U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -218,28 +221,28 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(3U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(3U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [5U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(2U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(2U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(1U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(1U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [6U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -248,12 +251,12 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(2U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(2U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [7U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -262,71 +265,71 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(3U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(3U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [8U])));
         }
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0 
             = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum;
         if (VL_LIKELY(((0x23U >= (0x3fU & ((IData)(1U) 
-                                           + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))))) {
+                                           + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))))) {
             vlSelfRef.cnn_accelerator__DOT__conv_out[(0x3fU 
                                                       & ((IData)(1U) 
                                                          + 
-                                                         VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))] 
+                                                         VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))] 
                 = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0;
         }
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum = 0U;
-        if (VL_GTS_III(32, 6U, vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)) {
+        if (VL_GTS_III(32, 6U, cnn_accelerator__DOT__conv_inst__DOT__i)) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(2U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(2U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [0U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(3U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(3U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [1U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(4U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(4U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [2U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(1U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(1U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(2U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(2U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [3U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -335,12 +338,12 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(3U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(3U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [4U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -349,28 +352,28 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(4U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(4U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [5U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(2U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(2U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(2U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(2U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [6U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -379,12 +382,12 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(3U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(3U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [7U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -393,71 +396,71 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(4U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(4U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [8U])));
         }
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0 
             = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum;
         if (VL_LIKELY(((0x23U >= (0x3fU & ((IData)(2U) 
-                                           + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))))) {
+                                           + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))))) {
             vlSelfRef.cnn_accelerator__DOT__conv_out[(0x3fU 
                                                       & ((IData)(2U) 
                                                          + 
-                                                         VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))] 
+                                                         VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))] 
                 = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0;
         }
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum = 0U;
-        if (VL_GTS_III(32, 6U, vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)) {
+        if (VL_GTS_III(32, 6U, cnn_accelerator__DOT__conv_inst__DOT__i)) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(3U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(3U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [0U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(4U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(4U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [1U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(5U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(5U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [2U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(1U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(1U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(3U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(3U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [3U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -466,12 +469,12 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(4U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(4U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [4U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -480,28 +483,28 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(5U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(5U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [5U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(2U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(2U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(3U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(3U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [6U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -510,12 +513,12 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(4U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(4U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [7U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -524,61 +527,61 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(5U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(5U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [8U])));
         }
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0 
             = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum;
         if (VL_LIKELY(((0x23U >= (0x3fU & ((IData)(3U) 
-                                           + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))))) {
+                                           + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))))) {
             vlSelfRef.cnn_accelerator__DOT__conv_out[(0x3fU 
                                                       & ((IData)(3U) 
                                                          + 
-                                                         VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))] 
+                                                         VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))] 
                 = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0;
         }
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum = 0U;
-        if (VL_GTS_III(32, 6U, vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)) {
+        if (VL_GTS_III(32, 6U, cnn_accelerator__DOT__conv_inst__DOT__i)) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(4U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(4U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [0U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(5U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(5U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [1U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(1U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(1U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(4U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(4U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [3U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -587,28 +590,28 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(5U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(5U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [4U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(2U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(2U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(4U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(4U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [6U])));
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
@@ -617,85 +620,82 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                              & ((IData)(5U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(5U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [7U])));
         }
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0 
             = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum;
         if (VL_LIKELY(((0x23U >= (0x3fU & ((IData)(4U) 
-                                           + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))))) {
+                                           + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))))) {
             vlSelfRef.cnn_accelerator__DOT__conv_out[(0x3fU 
                                                       & ((IData)(4U) 
                                                          + 
-                                                         VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))] 
+                                                         VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))] 
                 = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0;
         }
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum = 0U;
-        if (VL_GTS_III(32, 6U, vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)) {
+        if (VL_GTS_III(32, 6U, cnn_accelerator__DOT__conv_inst__DOT__i)) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(5U) 
-                                                + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))
+                                                + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(5U) 
-                                             + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))]
+                                             + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [0U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(1U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(1U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(5U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(1U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(5U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(1U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [3U])));
         }
-        if (VL_GTS_III(32, 6U, ((IData)(2U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))) {
+        if (VL_GTS_III(32, 6U, ((IData)(2U) + cnn_accelerator__DOT__conv_inst__DOT__i))) {
             vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum 
                 = (0xffffU & ((IData)(vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum) 
                               + (((0x23U >= (0x3fU 
                                              & ((IData)(5U) 
                                                 + VL_MULS_III(32, (IData)(6U), 
                                                               ((IData)(2U) 
-                                                               + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))))
+                                                               + cnn_accelerator__DOT__conv_inst__DOT__i)))))
                                    ? vlSelfRef.feature_map_in
                                   [(0x3fU & ((IData)(5U) 
                                              + VL_MULS_III(32, (IData)(6U), 
                                                            ((IData)(2U) 
-                                                            + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))]
+                                                            + cnn_accelerator__DOT__conv_inst__DOT__i))))]
                                    : 0U) * vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__kernel
                                  [6U])));
         }
-        vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__n = 3U;
-        vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__m = 3U;
         vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0 
             = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__sum;
         if (VL_LIKELY(((0x23U >= (0x3fU & ((IData)(5U) 
-                                           + VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i))))))) {
+                                           + VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i))))))) {
             vlSelfRef.cnn_accelerator__DOT__conv_out[(0x3fU 
                                                       & ((IData)(5U) 
                                                          + 
-                                                         VL_MULS_III(32, (IData)(6U), vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i)))] 
+                                                         VL_MULS_III(32, (IData)(6U), cnn_accelerator__DOT__conv_inst__DOT__i)))] 
                 = vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT____Vlvbound_h916ac358__0;
         }
-        vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__j = 6U;
-        vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i 
-            = ((IData)(1U) + vlSelfRef.cnn_accelerator__DOT__conv_inst__DOT__i);
+        cnn_accelerator__DOT__conv_inst__DOT__i = ((IData)(1U) 
+                                                   + cnn_accelerator__DOT__conv_inst__DOT__i);
     }
     vlSelfRef.cnn_accelerator__DOT____Vcellinp__relu_inst__feature_map_in[0U] 
         = vlSelfRef.cnn_accelerator__DOT__conv_out[0U];
@@ -975,185 +975,185 @@ VL_INLINE_OPT void Vcnn_accelerator___024root___ico_sequent__TOP__0(Vcnn_acceler
                                             [0x23U]))
             ? 0U : vlSelfRef.cnn_accelerator__DOT____Vcellinp__relu_inst__feature_map_in
            [0x23U]);
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = vlSelfRef.cnn_accelerator__DOT__relu_out[0U];
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [1U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [1U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [1U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [1U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [6U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [6U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [6U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [6U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [7U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [7U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [7U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+           [7U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
     cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0 
-        = vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
+        = cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
     vlSelfRef.feature_map_out[0U] = cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0;
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = vlSelfRef.cnn_accelerator__DOT__relu_out[2U];
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [3U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [3U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [3U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [3U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [8U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [8U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [8U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [8U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [9U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [9U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [9U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+           [9U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
     cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0 
-        = vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
+        = cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
     vlSelfRef.feature_map_out[1U] = cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0;
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = vlSelfRef.cnn_accelerator__DOT__relu_out[4U];
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [5U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [5U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [5U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [5U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0xaU] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0xaU] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0xaU] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0xaU] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0xbU] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0xbU] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0xbU] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+           [0xbU] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
     cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0 
-        = vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
+        = cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
     vlSelfRef.feature_map_out[2U] = cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0;
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = vlSelfRef.cnn_accelerator__DOT__relu_out[0xcU];
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0xdU] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0xdU] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0xdU] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0xdU] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x12U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x12U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x12U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0x12U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x13U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x13U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x13U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+           [0x13U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
     cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0 
-        = vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
+        = cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
     vlSelfRef.feature_map_out[3U] = cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0;
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = vlSelfRef.cnn_accelerator__DOT__relu_out[0xeU];
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0xfU] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0xfU] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0xfU] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0xfU] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x14U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x14U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x14U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0x14U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x15U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x15U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x15U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+           [0x15U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
     cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0 
-        = vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
+        = cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
     vlSelfRef.feature_map_out[4U] = cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0;
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = vlSelfRef.cnn_accelerator__DOT__relu_out[0x10U];
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x11U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x11U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x11U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0x11U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x16U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x16U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x16U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0x16U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x17U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x17U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x17U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+           [0x17U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
     cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0 
-        = vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
+        = cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
     vlSelfRef.feature_map_out[5U] = cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0;
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = vlSelfRef.cnn_accelerator__DOT__relu_out[0x18U];
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x19U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x19U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x19U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0x19U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x1eU] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x1eU] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x1eU] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0x1eU] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x1fU] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x1fU] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x1fU] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+           [0x1fU] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
     cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0 
-        = vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
+        = cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
     vlSelfRef.feature_map_out[6U] = cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0;
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = vlSelfRef.cnn_accelerator__DOT__relu_out[0x1aU];
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x1bU] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x1bU] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x1bU] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0x1bU] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x20U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x20U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x20U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0x20U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x21U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x21U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x21U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+           [0x21U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
     cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0 
-        = vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
+        = cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
     vlSelfRef.feature_map_out[7U] = cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0;
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = vlSelfRef.cnn_accelerator__DOT__relu_out[0x1cU];
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x1dU] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x1dU] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x1dU] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0x1dU] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x22U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x22U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x22U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
-    vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
+           [0x22U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+    cnn_accelerator__DOT__maxpool_inst__DOT__max_val 
         = ((vlSelfRef.cnn_accelerator__DOT__relu_out
-            [0x23U] > (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
+            [0x23U] > (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val))
             ? vlSelfRef.cnn_accelerator__DOT__relu_out
-           [0x23U] : (IData)(vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
+           [0x23U] : (IData)(cnn_accelerator__DOT__maxpool_inst__DOT__max_val));
     cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0 
-        = vlSelfRef.cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
+        = cnn_accelerator__DOT__maxpool_inst__DOT__max_val;
     vlSelfRef.feature_map_out[8U] = cnn_accelerator__DOT__maxpool_inst__DOT____Vlvbound_h016f65b6__0;
 }
 
@@ -1180,10 +1180,40 @@ void Vcnn_accelerator___024root___eval_act(Vcnn_accelerator___024root* vlSelf) {
     auto& vlSelfRef = std::ref(*vlSelf).get();
 }
 
+void Vcnn_accelerator___024root___nba_sequent__TOP__0(Vcnn_accelerator___024root* vlSelf);
+
 void Vcnn_accelerator___024root___eval_nba(Vcnn_accelerator___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcnn_accelerator___024root___eval_nba\n"); );
     Vcnn_accelerator__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Body
+    if ((3ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
+        Vcnn_accelerator___024root___nba_sequent__TOP__0(vlSelf);
+    }
+}
+
+VL_INLINE_OPT void Vcnn_accelerator___024root___nba_sequent__TOP__0(Vcnn_accelerator___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcnn_accelerator___024root___nba_sequent__TOP__0\n"); );
+    Vcnn_accelerator__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Init
+    CData/*0:0*/ __Vdly__cnn_accelerator__DOT__processing;
+    __Vdly__cnn_accelerator__DOT__processing = 0;
+    // Body
+    __Vdly__cnn_accelerator__DOT__processing = vlSelfRef.cnn_accelerator__DOT__processing;
+    if (vlSelfRef.reset) {
+        vlSelfRef.done = 0U;
+        __Vdly__cnn_accelerator__DOT__processing = 0U;
+    } else if (((IData)(vlSelfRef.start) & (~ (IData)(vlSelfRef.cnn_accelerator__DOT__processing)))) {
+        __Vdly__cnn_accelerator__DOT__processing = 1U;
+        vlSelfRef.done = 0U;
+    } else if (vlSelfRef.cnn_accelerator__DOT__processing) {
+        __Vdly__cnn_accelerator__DOT__processing = 0U;
+        vlSelfRef.done = 1U;
+    } else {
+        vlSelfRef.done = 0U;
+    }
+    vlSelfRef.cnn_accelerator__DOT__processing = __Vdly__cnn_accelerator__DOT__processing;
 }
 
 void Vcnn_accelerator___024root___eval_triggers__act(Vcnn_accelerator___024root* vlSelf);
@@ -1193,7 +1223,7 @@ bool Vcnn_accelerator___024root___eval_phase__act(Vcnn_accelerator___024root* vl
     Vcnn_accelerator__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
-    VlTriggerVec<0> __VpreTriggered;
+    VlTriggerVec<2> __VpreTriggered;
     CData/*0:0*/ __VactExecute;
     // Body
     Vcnn_accelerator___024root___eval_triggers__act(vlSelf);
@@ -1249,7 +1279,7 @@ void Vcnn_accelerator___024root___eval(Vcnn_accelerator___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vcnn_accelerator___024root___dump_triggers__ico(vlSelf);
 #endif
-            VL_FATAL_MT("rtl/cnn_accelerator.v", 1, "", "Input combinational region did not converge.");
+            VL_FATAL_MT("rtl/cnn_accelerator.v", 3, "", "Input combinational region did not converge.");
         }
         __VicoIterCount = ((IData)(1U) + __VicoIterCount);
         __VicoContinue = 0U;
@@ -1265,7 +1295,7 @@ void Vcnn_accelerator___024root___eval(Vcnn_accelerator___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vcnn_accelerator___024root___dump_triggers__nba(vlSelf);
 #endif
-            VL_FATAL_MT("rtl/cnn_accelerator.v", 1, "", "NBA region did not converge.");
+            VL_FATAL_MT("rtl/cnn_accelerator.v", 3, "", "NBA region did not converge.");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         __VnbaContinue = 0U;
@@ -1276,7 +1306,7 @@ void Vcnn_accelerator___024root___eval(Vcnn_accelerator___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vcnn_accelerator___024root___dump_triggers__act(vlSelf);
 #endif
-                VL_FATAL_MT("rtl/cnn_accelerator.v", 1, "", "Active region did not converge.");
+                VL_FATAL_MT("rtl/cnn_accelerator.v", 3, "", "Active region did not converge.");
             }
             vlSelfRef.__VactIterCount = ((IData)(1U) 
                                          + vlSelfRef.__VactIterCount);
@@ -1296,5 +1326,12 @@ void Vcnn_accelerator___024root___eval_debug_assertions(Vcnn_accelerator___024ro
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcnn_accelerator___024root___eval_debug_assertions\n"); );
     Vcnn_accelerator__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Body
+    if (VL_UNLIKELY(((vlSelfRef.clk & 0xfeU)))) {
+        Verilated::overWidthError("clk");}
+    if (VL_UNLIKELY(((vlSelfRef.reset & 0xfeU)))) {
+        Verilated::overWidthError("reset");}
+    if (VL_UNLIKELY(((vlSelfRef.start & 0xfeU)))) {
+        Verilated::overWidthError("start");}
 }
 #endif  // VL_DEBUG

@@ -1,73 +1,23 @@
-#include "Vcnn_accelerator.h"
+#include "Vtop_tb.h"
 #include "verilated.h"
-#include <iostream>
 #include "verilated_vcd_c.h"
 
-int main(int argc, char** argv) {
-    // Initialize Verilator
+int main(int argc, char **argv) {
     Verilated::commandArgs(argc, argv);
 
-    // Turn on wave tracing (must be called before any trace dumping)
+    Vtop_tb *top = new Vtop_tb;
+
+    VerilatedVcdC *tfp = new VerilatedVcdC;
     Verilated::traceEverOn(true);
+    top->trace(tfp, 99);
+    tfp->open("waveform.vcd");
 
-    // Create an instance of the accelerator
-    Vcnn_accelerator* top = new Vcnn_accelerator;
-
-    // Create a VCD trace file for waveform output
-    VerilatedVcdC* tfp = new VerilatedVcdC;
-    top->trace(tfp, 99);  // Max depth for tracing
-    tfp->open("waveform.vcd");  // Open the VCD file to write the waveforms
-
-    // Initialize feature_map_in with zeros
-    for (int i = 0; i < 36; i++) {
-        top->feature_map_in[i] = 0;
+    for (int i = 0; i < 2000; i++) {
+        top->clk = 0; top->eval(); tfp->dump(i*10);
+        top->clk = 1; top->eval(); tfp->dump(i*10 + 5);
     }
 
-    // Initial evaluation and waveform dump
-    top->eval();
-    tfp->dump(0);  // Dump the waveform at time 0
-
-    // Print initial outputs
-    std::cout << "Initial outputs:" << std::endl;
-    for (int i = 0; i < 9; i++) {
-        std::cout << "feature_map_out[" << i << "]: 0x" 
-                  << std::hex << top->feature_map_out[i] << std::endl;
-    }
-
-    // Test case 1: Fill feature_map_in with a pattern
-    std::cout << "\nTest case 1:" << std::endl;
-    for (int i = 0; i < 36; i++) {
-        top->feature_map_in[i] = 0xF0F0; // Pattern 1
-    }
-    top->eval();
-    tfp->dump(10);  // Dump waveform after Test case 1
-
-    // Print outputs
-    std::cout << "Outputs:" << std::endl;
-    for (int i = 0; i < 9; i++) {
-        std::cout << "feature_map_out[" << i << "]: 0x" 
-                  << std::hex << top->feature_map_out[i] << std::endl;
-    }
-
-    // Test case 2: Another pattern
-    std::cout << "\nTest case 2:" << std::endl;
-    for (int i = 0; i < 36; i++) {
-        top->feature_map_in[i] = (i % 2) ? 0xAAAA : 0x5555; // Alternating pattern
-    }
-    top->eval();
-    tfp->dump(20);  // Dump waveform after Test case 2
-
-    // Print outputs
-    std::cout << "Outputs:" << std::endl;
-    for (int i = 0; i < 9; i++) {
-        std::cout << "feature_map_out[" << i << "]: 0x" 
-                  << std::hex << top->feature_map_out[i] << std::endl;
-    }
-
-    // Clean up
-    tfp->close();  // Close the VCD file
-    top->final();
+    tfp->close();
     delete top;
-
     return 0;
 }

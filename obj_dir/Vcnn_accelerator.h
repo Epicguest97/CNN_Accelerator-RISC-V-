@@ -12,7 +12,6 @@
 
 class Vcnn_accelerator__Syms;
 class Vcnn_accelerator___024root;
-class VerilatedVcdC;
 
 // This class is the main interface to the Verilated model
 class alignas(VL_CACHE_LINE_BYTES) Vcnn_accelerator VL_NOT_FINAL : public VerilatedModel {
@@ -24,11 +23,15 @@ class alignas(VL_CACHE_LINE_BYTES) Vcnn_accelerator VL_NOT_FINAL : public Verila
 
     // CONSTEXPR CAPABILITIES
     // Verilated with --trace?
-    static constexpr bool traceCapable = true;
+    static constexpr bool traceCapable = false;
 
     // PORTS
     // The application code writes and reads these signals to
     // propagate new values into/out from the Verilated model.
+    VL_IN8(&clk,0,0);
+    VL_IN8(&reset,0,0);
+    VL_IN8(&start,0,0);
+    VL_OUT8(&done,0,0);
     VL_IN16((&feature_map_in)[36],15,0);
     VL_OUT16((&feature_map_out)[9],15,0);
 
@@ -82,7 +85,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vcnn_accelerator VL_NOT_FINAL : public Verila
     /// Re-init after cloning the model at the process level (e.g. fork in Linux)
     /// Re-allocate necessary resources. Called after cloning.
     void atClone() const;
-    std::unique_ptr<VerilatedTraceConfig> traceConfig() const override final;
   private:
     // Internal functions - trace registration
     void traceBaseModel(VerilatedTraceBaseC* tfp, int levels, int options);
