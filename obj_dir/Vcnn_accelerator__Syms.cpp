@@ -18,7 +18,7 @@ Vcnn_accelerator__Syms::Vcnn_accelerator__Syms(VerilatedContext* contextp, const
     , TOP{this, namep}
 {
         // Check resources
-        Verilated::stackCheck(57);
+        Verilated::stackCheck(33);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);
     _vm_contextp__->timeprecision(-12);
