@@ -107,7 +107,7 @@ feature_map_out[8]: 0x5554
 ![Simulation Screenshot](obj_dir/waveform_plot.png)
 
 **Accelerator Block Diagram:**  
-![Block Diagram](doc/accelerator_block_diagram.png)
+![Block Diagram](obj_dir/block_diagram.png)
 
 ---
 
